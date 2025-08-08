@@ -6,6 +6,9 @@ const UseSuma = () => {
     const [numero2, setNumero2] = useState('');
     const [resultado, setResultado] = useState('');
 
+    /**
+     * Suma dos numeros
+     */
     const Suma = () => {
         if (numero1 === '') {
             Alerta('Ingrese primer número');
@@ -17,12 +20,19 @@ const UseSuma = () => {
         }
     };
 
+    /**
+     * Limpia todos los campos del formulario
+     */
     const Limpiar = () => {
         setNumero1('');
         setNumero2('');
         setResultado('');
     };
 
+    /**
+     * Muestra una alerta de advertencia
+     * @param {string} mensaje 
+     */
     const Alerta = (mensaje) => {
         Swal.fire({
             title: 'Advertencia',
